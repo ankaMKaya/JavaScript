@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascirpt Hipotenüs Hesaplama</h2>
+    <input placeholder="1.Kenar Giriniz" type="text" id="kenar1">
+    <input placeholder="2.Kenar Giriniz" type="text" id="kenar2">
+    <button id="btn">HESAPLA</button>
+    <div id="snc">Sonuç:</div>
+
+    <script>
+        function Hesapla()
+        {
+            var k1=Number(document.getElementById("kenar1").value);
+            var k2=Number(document.getElementById("kenar2").value);
+            var hipotenus=Math.sqrt((k1*k1)) + ((k2*k2));
+            document.getElementById("snc").innerHTML="Hipotenüs : " + hipotenus;
+        }
+
+        var hesapBtn=document.getElementById("btn");
+        hesapBtn.onclick=Hesapla;
+
+    </script>
+
+</body>
+</html>
