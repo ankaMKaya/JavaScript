@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="sayi1">
+    <input type="button" id="hesapla" value="HESAPLAMA">
+    <div id="durum1goster"></div>
+
+    <script>
+        var sayi1nesne=document.getElementById("sayi1");
+        var hesaplama1btn=document.getElementById("hesapla");
+
+        hesaplama1btn.onclick=islemiyap;
+
+        function islemiyap(){
+            var sayi1=Number(sayi1nesne.value);
+
+            var durum1goster=document.getElementById("durum1goster");
+
+            if(sayi1<0){
+                durum1goster.innerHTML="SAYIMIZ POZİTİFTİR.";
+            }
+            else if(sayi1>0){
+                durum1goster.innerHTML="SAYIMIZ NEGATİFTİR.";
+
+            }
+            else(){
+                durum1goster.innerHTML="SAYIMIZ SIFIRDIR.";
+            }
+        }
+
+    </script>
+</body>
+</html>

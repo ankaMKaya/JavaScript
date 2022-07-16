@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="sayi">
+    <input type="button" id="hesapla" value="HESAPLA">
+    <div id="durumgoster"></div>
+     
+     
+    <script>
+     
+    var sayiNesne=document.getElementById("sayi");
+    var hesaplaBtn=document.getElementById("hesapla");
+     
+    //tıklama olayına islemYap metodunu bağlıyoruz. 
+    //burada metod çalışmadığı için parantez olmaz.
+    hesaplaBtn.onclick=islemYap;
+     
+    function islemYap(){
+     
+    var sayi=Number(sayiNesne.value);//dışarıdaki global nesnseyi alıyor
+     
+    //durumun gösterileceği div seçildi. Bu divin icine öğrenci notunu göstereceğiz
+    var durumGoster=document.getElementById("durumgoster");
+    if(sayi<0)
+    {
+     
+    durumGoster.innerHTML="SAYI NEGATİFTİR."; 
+    }
+    else if(sayi>0)
+    {
+    durumGoster.innerHTML="SAYI POZİTİFTİR"; 
+    }
+    else
+    {
+    durumGoster.innerHTML="SAYI SIFIRDIR"; 
+    }
+     
+    }
+    </script>
+    </body> 
+</html>
