@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="uzunluk1" placeholder="Kilometreyi giriniz">
+    <input type="button" id="hesapla" value="Hesapla">
+
+        <script>
+            function hesapla(){
+                var sayi=document.getElementById("uzunluk1").value;
+                sayi=Number(sayi);
+                var mil=0.621*sayi;
+                alert(sayi+mil.toFixed(3)+"mil");
+            }
+
+            var hesapBtn=document.getElementById("hesapla");
+
+            hesapBtn.onclick=hesapla;
+        </script>
+
+</body>
+</html>
