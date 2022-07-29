@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Bugün Günlerden: </p>
+    <p id="test"></p>
+    <input type="button" value="GÜN" id="gunhsp">
+    <script>
+        var d=new Date();
+        var gunler=["pazar","pazartesi","salı","çarşamba","perşembe","cuma","cumartesi"];
+        var hesapbtn=document.getElementById("gunhsp");
+        document.getElementById("test").innerHTML=gunler[d.getDay()];
+        hesapbtn.onclick=gunhsp;
+    </script>
+</body>
+</html>
