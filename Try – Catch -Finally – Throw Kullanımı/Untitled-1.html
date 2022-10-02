@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var nesne =document.getElementById("tc");
+        var uyari =document.getElementById("uyari");
+         
+        nesne.onkeypress=function(){
+        uyari.textContent="";
+        }
+         
+        nesne.onblur=function(){
+         
+        try{
+        if(isNaN(nesne.value)) throw "Hatalı karakter girdiniz."; 
+        if(nesne.value.length<11) throw "11 karakterden az girdiniz.";
+        if(nesne.value.length>11) throw "11 karakterden fazla girdiniz.";
+        }
+        catch(e)
+        {
+        uyari.textContent=e;
+        nesne.focus();
+        }
+         
+        } 
+        </script>
+</head>
+<body>
+    <table>
+        <tr>
+        <td>TC Kimlik</td>
+        <td><input type="text" id="tc"></td>
+        <td><div id="uyari"></div><td>
+        </tr>
+         
+        <tr>
+        <td>Adı</td>
+        <td><input type="text" id="ad"></td>
+        </tr>
+         
+        <tr>
+        <td>Soyadı</td>
+        <td><input type="text" id="soyad"></td>
+        </tr>
+         
+        </table>
+</body>
+</html>
